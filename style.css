@@ -326,6 +326,8 @@ section .skills .title2::before {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 15px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
 }
 
 @media (max-width: 767px) {
