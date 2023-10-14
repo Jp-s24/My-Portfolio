@@ -979,3 +979,70 @@ section {
 body {
   overflow-x: hidden;
 }
+
+/* Adjustments for mobile and smaller screens */
+@media (max-width: 767px) {
+  .navbar .menu li {
+    display: block;
+    margin-left: 0; /* Adjust margin to remove space between menu items */
+  }
+
+  .home .home-content .text-2 {
+    font-size: 50px; /* Adjusted font size for smaller screens */
+  }
+
+  .home .home-content .text-3 {
+    font-size: 27px; /* Adjusted font size for smaller screens */
+  }
+
+  .services .serv-content .card {
+    width: 90%; /* Adjusted width for smaller screens */
+    margin: 20px auto; /* Center the card */
+  }
+
+  .about .about-content .left img {
+    width: 100%; /* Adjust image width for smaller screens */
+    margin-right: 0; /* Remove margin */
+  }
+
+  .about .about-content .right {
+    width: 100%; /* Adjusted width for smaller screens */
+    margin-top: 20px; /* Add margin to separate content */
+  }
+
+  .contact .contact-content .column {
+    width: 100%; /* Adjusted width for smaller screens */
+    margin-right: 0; /* Remove margin */
+  }
+}
+
+/* Additional adjustments for even smaller screens */
+@media (max-width: 500px) {
+  .home .home-content .text-2 {
+    font-size: 40px; /* Further adjusted font size for very small screens */
+  }
+
+  .home .home-content .text-3 {
+    font-size: 24px; /* Further adjusted font size for very small screens */
+  }
+
+  .services .serv-content .card {
+    width: 100%; /* Adjusted width for very small screens */
+    margin: 15px auto; /* Center the card */
+  }
+
+  .about .about-content .left img {
+    width: 100%; /* Adjusted image width for very small screens */
+  }
+
+  .about .about-content .right {
+    width: 100%; /* Adjusted width for very small screens */
+  }
+
+  .contact .contact-content .column {
+    width: 100%; /* Adjusted width for very small screens */
+    margin-right: 0; /* Remove margin */
+  }
+}
+
+/* ... */
