@@ -766,9 +766,24 @@ section:last-child {
     justify-content: center;
     margin: 0 auto 60px;
   }
+  /* ... Your existing styles ... */
+
   .about .about-content .right {
-    flex: 100%;
+    width: 100%; /* Adjusted width for smaller screens */
   }
+
+  .about .about-content .right .text {
+    font-size: 25px; /* Adjusted font size */
+    font-weight: 600;
+    margin-bottom: 5px; /* Adjusted margin to reduce space between lines */
+  }
+
+  .about .about-content .right p {
+    text-align: justify;
+    margin-top: 0; /* Remove top margin for the paragraph */
+  }
+
+  /* ... Remaining styles ... */
 
   .services .serv-content .card {
     width: calc(50% -10%);
