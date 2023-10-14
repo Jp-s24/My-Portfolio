@@ -1,75 +1,81 @@
 $(document).ready(function () {
   $(window).scroll(function () {
-    // sticky navbar on scroll script
-    if (this.scrollY > 20) {
-      $(".navbar").addClass("sticky");
-    } else {
-      $(".navbar").removeClass("sticky");
-    }
+    const scrollY = $(this).scrollTop();
 
-    // scroll-up button show/hide script
-    if (this.scrollY > 500) {
-      $(".scroll-up-btn").addClass("show");
-    } else {
-      $(".scroll-up-btn").removeClass("show");
-    }
+    // Sticky navbar on scroll
+    $(".navbar").toggleClass("sticky", scrollY > 20);
+
+    // Show/hide scroll-up button
+    $(".scroll-up-btn").toggleClass("show", scrollY > 500);
   });
 
-  // slide-up script
+  // Scroll-up script
   $(".scroll-up-btn").click(function () {
-    $("html").animate({ scrollTop: 0 });
-    // removing smooth scroll on slide-up button click
-    $("html").css("scrollBehavior", "auto");
+    $("html, body").animate({ scrollTop: 0 }, "slow");
   });
 
+  // Smooth scroll on menu item click
   $(".navbar .menu li a").click(function () {
-    // applying again smooth scroll on menu items click
-    $("html").css("scrollBehavior", "smooth");
+    const targetId = $(this).attr("href");
+    const offset = $(targetId).offset().top;
+
+    $("html, body").animate({ scrollTop: offset }, "slow");
   });
 
-  // toggle menu/navbar script
+  // Toggle menu/navbar script
   $(".menu-btn").click(function () {
     $(".navbar .menu").toggleClass("active");
-    $(".menu-btn i").toggleClass("active");
+    $(this).find("i").toggleClass("active");
   });
 
-  // typing text animation script
-  var typed = new Typed(".typing", {
-    strings: ["To My Site"],
+  // Typing text animation script
+  const typedOptions = {
     typeSpeed: 150,
-    forwardSpeed: 60,
+    backSpeed: 60,
     loop: true,
+  };
+
+  new Typed(".typing", {
+    ...typedOptions,
+    strings: ["To My Site"],
   });
 
-  var typed = new Typed(".typing-2", {
+  new Typed(".typing-2", {
+    ...typedOptions,
     strings: ["Software Engineer"],
-    typeSpeed: 100,
-    forwardSpeed: 60,
-    loop: true,
   });
 
-  // owl carousel script
+  // Owl carousel script
   $(".carousel").owlCarousel({
     margin: 20,
     loop: true,
     autoplay: true,
-    autoplayTimeOut: 5000,
+    autoplayTimeout: 5000,
     autoplayHoverPause: true,
     responsive: {
-      0: {
-        items: 1,
-        nav: false,
-      },
-      600: {
-        items: 2,
-        nav: false,
-      },
-      1000: {
-        items: 3,
-        nav: false,
-      },
+      0: { items: 1, nav: false },
+      600: { items: 2, nav: false },
+      1000: { items: 3, nav: false },
     },
   });
+
+  // Adjust image description height
+  function adjustDescriptionHeight() {
+    const imageDescriptions = document.querySelectorAll(".image__description");
+
+    imageDescriptions.forEach((description) => {
+      const parentHeight = description.parentElement.clientHeight;
+      const titleHeight = description.previousElementSibling.clientHeight;
+      const maxHeight = parentHeight - titleHeight - 20; // Adjusted padding/margin
+
+      description.style.maxHeight = `${maxHeight}px`;
+      description.style.overflowY = "auto";
+    });
+  }
+
+  // Call the function when the window is resized or when page loads
+  window.addEventListener("resize", adjustDescriptionHeight);
+  window.addEventListener("load", adjustDescriptionHeight);
 });
 
 let slideIndex = 1;
@@ -85,41 +91,25 @@ function currentSlide(n) {
   showSlides((slideIndex = n));
 }
 
-//function to iterate through the slides
+// Function to iterate through the slides
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slide");
-  let dots = document.getElementsByClassName("dot");
+  const slides = document.getElementsByClassName("slide");
+  const dots = document.getElementsByClassName("dot");
+
   if (n > slides.length) {
     slideIndex = 1;
-  }
-  if (n < 1) {
+  } else if (n < 1) {
     slideIndex = slides.length;
   }
-  for (i = 0; i < slides.length; i++) {
+
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
+
+  for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
+
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
-
-// Function to adjust description height
-function adjustDescriptionHeight() {
-  const imageDescriptions = document.querySelectorAll(".image__description");
-
-  imageDescriptions.forEach((description) => {
-    const parentHeight = description.parentElement.clientHeight;
-    const titleHeight = description.previousElementSibling.clientHeight;
-    const maxHeight = parentHeight - titleHeight - 20; // Adjusted padding/margin
-
-    description.style.maxHeight = `${maxHeight}px`;
-    description.style.overflowY = "auto";
-  });
-}
-
-// Call the function when the window is resized or when page loads
-window.addEventListener("resize", adjustDescriptionHeight);
-window.addEventListener("load", adjustDescriptionHeight);
