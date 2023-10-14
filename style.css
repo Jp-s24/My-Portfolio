@@ -524,14 +524,13 @@ img.portfolio-box {
   background-color: white;
   border-radius: 50%;
   transition: all 0.3s ease;
-  position: fixed;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 /* The dots/bullets/indicators */
-
 .dot {
   cursor: pointer;
   height: 10px; /* Adjust the height to your preference */
@@ -541,13 +540,11 @@ img.portfolio-box {
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
-  position: fixed;
 }
 
 .active,
 .dot:hover {
   background-color: #717171;
-  position: fixed;
 }
 
 /* ... Your other styles ... */
@@ -725,7 +722,7 @@ img.portfolio-box {
 
 .copyright {
   text-align: center;
-  padding: 5px 0;
+  padding: 10px 0;
   background: crimson;
   color: white;
   font-size: 17px;
