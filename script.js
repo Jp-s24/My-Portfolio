@@ -105,3 +105,22 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+function adjustDescriptionHeight() {
+  const imageDescriptions = document.querySelectorAll(".image__description");
+
+  imageDescriptions.forEach((description) => {
+    const parentHeight = description.parentElement.clientHeight;
+    const titleHeight = description.previousElementSibling.clientHeight;
+    const maxHeight = parentHeight - titleHeight - 20; // Adjusted padding/margin
+
+    description.style.maxHeight = `${maxHeight}px`;
+    description.style.overflowY = "auto";
+  });
+}
+
+// Call the function when the window is resized
+window.addEventListener("resize", adjustDescriptionHeight);
+
+// Call the function initially to set the initial heights
+adjustDescriptionHeight();
