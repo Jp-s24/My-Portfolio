@@ -318,18 +318,6 @@ section .skills .title2::before {
   padding-right: 10px;
 }
 
-.git_logo {
-  height: 50px;
-  width: 50px;
-  background-color: white;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .portfolio1 {
   background: var(--second-bg-color);
 }
@@ -356,6 +344,9 @@ h2.portfolio1 {
 
 section.portfolio1 {
   padding-block-start: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .portfolio-container .portfolio-box {
@@ -482,7 +473,8 @@ section .skills .title2::before {
 .portfolio-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px; /* Adjust the gap based on your design */
+  gap: 20px;
+  justify-items: center;
 }
 
 .portfolio-box {
@@ -523,6 +515,36 @@ img.portfolio-box {
 
 .portfolio-box:hover .portfolio-layer {
   opacity: 1;
+}
+
+/* GitHub logo */
+.git_logo {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px; /* Adjust the height to your preference */
+  width: 10px; /* Adjust the width to your preference */
+  margin: 0 5px; /* Adjust the margin to create spacing between dots */
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
 }
 
 /* ... Your other styles ... */
