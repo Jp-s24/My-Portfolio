@@ -783,7 +783,11 @@ section:last-child {
     margin-top: 0; /* Remove top margin for the paragraph */
   }
 
-  /* ... Remaining styles ... */
+  /* ... Your existing styles ... */
+
+  .typing-2::after {
+    letter-spacing: -1px; /* Adjust the letter spacing to reduce space between letters */
+  }
 
   .services .serv-content .card {
     width: calc(50% -10%);
