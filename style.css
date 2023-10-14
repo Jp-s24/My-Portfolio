@@ -321,11 +321,15 @@ section .skills .title2::before {
 .git_logo {
   height: 50px;
   width: 50px;
-  margin: 10px;
   background-color: white;
   border-radius: 50%;
   transition: all 0.3s ease;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 .portfolio1 {
   background: var(--second-bg-color);
 }
@@ -445,11 +449,12 @@ a.i.portfolio-layer {
 }
 
 /* The dots/bullets/indicators */
+/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
+  height: 10px; /* Adjust the height to your preference */
+  width: 10px; /* Adjust the width to your preference */
+  margin: 0 5px; /* Adjust the margin to create spacing between dots */
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
