@@ -304,9 +304,10 @@ section .skills .title2::before {
 }
 
 .image__title {
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: bold;
   margin-bottom: 30px;
+  margin: 0.3rem 0 1rem;
 }
 
 .image__description {
@@ -319,6 +320,13 @@ section .skills .title2::before {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+  .image__description {
+    font-size: 1.2rem; /* Adjust the font size for smaller screens */
+    margin: 0.2rem 0 0.5rem; /* Adjust the margins for smaller screens */
+  }
 }
 
 .portfolio1 {
