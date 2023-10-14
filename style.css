@@ -538,7 +538,7 @@ img.portfolio-box {
 
 /* GitHub logo */
 .git_logo {
-  height: 50px;
+  height: auto;
   width: 50px;
   background-color: white;
   border-radius: 50%;

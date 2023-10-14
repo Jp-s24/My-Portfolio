@@ -106,6 +106,7 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
+// Function to adjust description height
 function adjustDescriptionHeight() {
   const imageDescriptions = document.querySelectorAll(".image__description");
 
@@ -119,8 +120,6 @@ function adjustDescriptionHeight() {
   });
 }
 
-// Call the function when the window is resized
+// Call the function when the window is resized or when page loads
 window.addEventListener("resize", adjustDescriptionHeight);
-
-// Call the function initially to set the initial heights
-adjustDescriptionHeight();
+window.addEventListener("load", adjustDescriptionHeight);
