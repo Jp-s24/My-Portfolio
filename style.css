@@ -303,6 +303,12 @@ section .skills .title2::before {
   transform: translateY(0);
 }
 
+.slideshow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .image__title {
   font-size: 1.6em;
   font-weight: bold;
@@ -324,7 +330,7 @@ section .skills .title2::before {
 
 @media (max-width: 767px) {
   .image__description {
-    font-size: 1.2rem; /* Adjust the font size for smaller screens */
+    font-size: 1rem; /* Adjust the font size for smaller screens */
     margin: 0.2rem 0 0.5rem; /* Adjust the margins for smaller screens */
   }
 }
