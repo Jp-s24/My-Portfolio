@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>  
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0-beta3/css/all.min.css" integrity="sha384-S64yFDdiQRyBYc7w1aV50kC5VKYsr5FRFru+zlKfrj5wbY1HHRaTgj7WvtYu+Lp7" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+</head>
+
+<body> 
+    <!-- <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>      -->
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#">Portfo<span>lio</span></a></div>
+            <ul class="menu" style="background-color: crimson;">
+                 <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#about" class="menu-btn">About Me</a></li>
+                <li><a href="#services" class="menu-btn">Skills</a></li>
+                <li><a href="#skills" class="menu-btn">Projects</a></li>
+                <li><a href="Jean-Paul-Resume-2023.pdf">Resume</a></li>
+                <li><a href="#contact">Contact
+                    <!-- <div class="dropdown">
+                        <button class="dropbtn">
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="https://www.linkedin.com/in/jean-paul-saliba-b4a9b1202/"><img style="width: 100px; height: 100px;"  src="images/linkedin-01-01-512.png"></a>
+                          <a href=""></a>
+                          <a href="tel:416-845-9847"><img style="width: 100px; height: 100px;"  src="images/Phone.png" alt=""></a>
+                          <a href="mailto:jeanpaul.saliba@ontariotechu.net"><img style="width: 100px; height: 100px;"  src="images/email-icon-3.jpg"></a>
+                        </div>
+                      </div> -->
+                </a></li>
+
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- home section  -->
+
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">Hello, my name is</div>
+                <div class="text-2">Jean-Paul Saliba</div>
+                <div class="text-3">Welcome <span class="typing"></span></div>                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- about section begins here  -->
+
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title">About Me</h2>
+            <div class="about-content">      
+                <div class="column left">
+                    <img src="images/AI-Gen.jpg" alt="profile pic">
+
+                </div> 
+                <div class="column right">
+                    <div class="text">I am a <span class="typing-2"></span> <br> </br> </div>
+                    <p>I am currently a fourth year Software Engineering student at Ontario Tech University. I am a very outgoing person who enjoys to learn new things and improve daily. 
+                        A typical day for me are early mornings, working out, programming and learning. I am a very passionate guy, who always puts a full effort in everything I do.  
+                         I like to utilize my time wisely that is why I am always activly searching for new business opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Skills section begins here  -->
+
+        <section class="services" id="services">
+            <div class="max-width">
+                <h2 class="title">My Skills</h2>
+                <div class="serv-content">  
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-paint-brush"></i>
+                            <div class="text">Web Development</div>
+                            <p> Understanding of JavaScript, HTML, CSS, PHP, React, Bootstrap and Flask</p>
+                        </div>
+                    </div>  
+                    
+                        <div class="card">
+                        <div class="box">
+                            <i class="fas fa-code"></i>
+                            <div class="text"> Major Programming Languages</div>
+                            <p>Understanding of C++, Java, Python, Javascript and SQL</p>
+                            </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-wrench"></i>                      
+                            <div class="text">Solid Works</div>
+                            <p>Prevelant in CAD softwares structure and design</p>
+                        </div>
+                    </div>
+
+                   </div>
+
+                   
+                </div>
+        </section>
+
+<!-- projects section -->
+<section class="skills" id="skills">
+    <div class="max-width">
+        <h2 class="title">My Projects</h2>
+
+        <div class="slideshow">
+            <div class="slide">
+                <div class="image">
+                    <div class="portfolio-box"></div>
+                    <img class="image__img" src="images/2-Dgame-SS1.png" alt="2-D Game project">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">2-D Game Website</div>
+                        <p class="image__description">During my second year of University I collaborated with a team to create a user-friendly website for a 2-D game, using JavaScript, PHP, HTML, and CSS. The game consists of three game modes where the user has 3 lives. The goal of the game is to catch as many balls as possible with the paddle.</p>
+                        <a href="https://github.com/Jp-s24/Ballout-2-D-game"><img class="git_logo" src="images/Github-logo.png" alt="2-D game image"></a>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="image">
+                    <div class="portfolio-box"></div>
+                    <img class="image__img" src="images/cbir.jpg" alt="Content Based Image Retrieval Project">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">Content Based Image Retrieval</div>
+                        <p class="image__description">This project involved collaborating with team members to read barcodes from a dataset of 100 images and implementing Radon Barcode Transformation to efficiently sort and categorize them in just 25 seconds. Additionally, I used threshold projections and hamming distance algorithms to compare barcodes, achieving an 88 percent accuracy rate in retrieving images. I also optimized the search algorithm, achieving a time complexity of O(n).</p>
+                        <a href="https://github.com/Jp-s24/MNIST_BARCODE_GENERATOR"><img class="git_logo" src="images/Github-logo.png" alt="Barcode project image"></a>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="image">
+                    <div class="portfolio-box"></div>
+                    <img class="image__img " src="images/book-store.jpg" alt="Online Book Store Project" height="500px">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">Online Book Store</div>
+                        <p class="image__description">I developed an Online Book Store using Flask, Python, and SQLite3, creating a user-friendly web application for managing and filtering books. Users can easily browse, search, and filter books using various criteria. I utilized version control with Git and GitHub, collaborated on branching strategies, and ensured bug fixes within the development team. The project also incorporated an SQL database to store inventory, account information, and transaction data locally.</p>
+                        <a href="https://github.com/Jp-s24/Online-Book-Store"><img class="git_logo" src="images/Github-logo.png" alt="Online book store project"></a>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+            
+        <!-- contact Section  -->
+        
+        <section class="contact" id="contact">
+            <div class="max-width" style="align-items: center;">
+                <h2 class="title2" style="margin-top: 0px;">Contact Info</h2>
+                <div class="contact-content">
+                    <div class="column left">
+                        <!-- <div class="text" >Contact Details</div> -->
+                        <p class="contact-title">Please feel free to contact me for any inquiries</p>
+                        <br>
+                        <div class="icons">
+                            <div class="row">
+                                <i class="fas fa-user"></i>
+                                <div class="info">
+                                    <div class="head">Name</div>
+                                    <div class="sub-title">Jean-Paul Saliba</div>
+                                </div>
+                            </div>
+                            <div class="email">
+                                <a href="mailto:jeanpaul.saliba@ontariotechu.net">
+                                <i class="fas fa-envelope"></i>
+                                </a>
+                                <div class="info">
+                                    <div class="head">Email</div>
+                                    <div class="sub-title">jeanpaul.saliba@ontariotechu.net</div>
+                                </div>
+                            </div>
+                    <div class="github">
+                        <a href="https://github.com/Jp-s24">
+                            <div class="head" style="font-weight: bold;">
+                                <i class="fab fa-github"></i>
+                            </div>
+                        </a>
+                         <div class="info">
+                                    <div class="head">Github</div>
+                                </div>
+                    </div>
+
+                    <div class="link">
+                        <a href="https://www.linkedin.com/in/jp-saliba/">
+                            <div class="head" style="font-weight: bold;">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                        </a>
+
+                        <div class="info">
+                                    <div class="head">Linkedin</div>
+                                </div>
+                    </div>
+
+                    </div>
+        </section>
+
+        <div class="copyright">
+            &copy; 2023 <strong>Jean-Paul Saliba</strong>. All Rights Reserved.
+        </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
