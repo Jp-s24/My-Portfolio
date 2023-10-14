@@ -645,10 +645,12 @@ a.i.portfolio-layer {
   color: white;
   font-size: 17px;
   font-weight: 500;
-  position: relative;
+  position: fixed;
   bottom: 0;
   width: 100%;
   font-family: "Ubuntu", sans-serif;
+  left: 0; /* Keep the footer anchored to the left */
+  z-index: 999; /* Ensure it appears on top */
 }
 
 /* Remove padding for the last section */
