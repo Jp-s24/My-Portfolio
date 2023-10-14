@@ -467,6 +467,61 @@ a.i.portfolio-layer {
   animation-duration: 1.5s;
 }
 
+/* Update styles for projects section to be responsive */
+
+section .skills .title2::before {
+  width: 80%; /* Adjusted width for responsiveness */
+  max-width: 100%; /* Ensure it doesn't exceed 100% */
+}
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px; /* Adjust the gap based on your design */
+}
+
+.portfolio-box {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--bg-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img.portfolio-box {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-box:hover img.portfolio-box {
+  transform: scale(1.1);
+}
+
+.portfolio-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+  opacity: 1;
+}
+
+/* ... Your other styles ... */
+
 @keyframes fade {
   from {
     opacity: 0.4;
