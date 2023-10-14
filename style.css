@@ -306,16 +306,19 @@ section .skills .title2::before {
 .image__title {
   font-size: 2em;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .image__description {
-  font-size: 1.15em;
-  margin-top: 0.5em;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1em;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   max-width: 90%;
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 15px;
 }
 
 .portfolio1 {
