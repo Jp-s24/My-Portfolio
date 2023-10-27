@@ -471,10 +471,10 @@ a.i.portfolio-layer {
   transition: background-color 0.6s ease;
 }
 
-.active,
+/* .active,
 .dot:hover {
   background-color: #717171;
-}
+} */
 
 /* Fading animation */
 .fade {
@@ -561,10 +561,10 @@ img.portfolio-box {
   transition: background-color 0.6s ease;
 }
 
-.active,
+/* .active,
 .dot:hover {
   background-color: #717171;
-}
+} */
 
 /* ... Your other styles ... */
 
