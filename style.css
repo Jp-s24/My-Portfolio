@@ -867,7 +867,6 @@ section:last-child {
     justify-content: center;
     margin: 0 auto 60px;
   }
-  /* ... Your existing styles ... */
 
   .about .about-content .right {
     width: 100%; /* Adjusted width for smaller screens */
@@ -884,8 +883,6 @@ section:last-child {
     margin-top: 0; /* Remove top margin for the paragraph */
   }
 
-  /* ... Your existing styles ... */
-
   .typing-2::after {
     letter-spacing: -1px; /* Adjust the letter spacing to reduce space between letters */
   }
@@ -895,8 +892,6 @@ section:last-child {
     margin-bottom: 20px;
   }
 }
-
-/* all similar style code  */
 
 section {
   padding: 100px 0;
@@ -1058,6 +1053,13 @@ section .title::after {
   font-weight: 600;
   margin-bottom: 10px;
   text-align: justify;
+}
+
+/* Adjust the line height for the paragraph text in the about me section on mobile */
+@media (max-width: 767px) {
+  .about .about-content .right p {
+    line-height: 1.4; /* You can adjust the value as needed */
+  }
 }
 
 section {
