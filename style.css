@@ -600,7 +600,7 @@ img.portfolio-box {
 }
 
 .contact .contact-content .text {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -733,6 +733,28 @@ img.portfolio-box {
 
 .contact .max-width {
   max-width: 100%; /* Adjust this based on your design */
+}
+.contact-item {
+  display: flex;
+  align-items: center; /* Ensures horizontal alignment */
+  text-decoration: none; /* Removes underline from links */
+  color: black; /* Ensures both text and icon are black */
+  gap: 8px; /* Adds spacing between the icon and the text */
+}
+
+.contact-item:hover .text {
+  text-decoration: underline; /* Optional: Underline on hover */
+}
+
+.contact-item i {
+  font-size: 2rem; /* Adjust icon size to match text */
+  color: black; /* Ensures the icon matches the text color */
+  display: inline-block; /* Keeps the icon inline with text */
+}
+
+.contact-item span {
+  font-size: 10px; /* Matches text size to icon */
+  line-height: 1; /* Ensures consistent vertical alignment */
 }
 
 .contact .contact-content .left .icons {
