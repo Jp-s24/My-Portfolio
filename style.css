@@ -589,50 +589,6 @@ img.portfolio-box {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .slide {
-    width: 100%;
-    padding: 0 10px;
-  }
-
-  .image__img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  .image__overlay {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .image__title {
-    font-size: 1.2em;
-    text-align: center;
-  }
-
-  .image__description {
-    font-size: 0.95em;
-    text-align: center;
-  }
-
-  .Barracuda-logo {
-    width: 60px;
-  }
-
-  .prev,
-  .next {
-    font-size: 18px;
-    padding: 10px;
-    margin-top: -30px;
-  }
-
-  .dot {
-    height: 8px;
-    width: 8px;
-  }
-}
-
 /* Contact section style */
 .contact .title2::after {
   content: "Get In Touch";
